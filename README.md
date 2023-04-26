@@ -13,7 +13,7 @@ This repo is generated from [Patrick's solidity fuzzing boilerplate](https://git
 ```
 
 ## Setup
-You will need to install [Foundry](https://book.getfoundry.sh/forge/installation.html) to run the fuzzing tests.
+You will need to install [Foundry](https://book.getfoundry.sh/getting-started/installation) to run the fuzzing tests.
 Here are the installation instructions for mac users:
 
 Open your terminal and type in the following command:
