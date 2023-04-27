@@ -11,6 +11,46 @@
     ]
   },
   "files": {
+    "lib/FixedPointMathLib.sol": {
+      "lastModificationDate": 1682572491582,
+      "contentHash": "231022a1bd7f2058bfdafc59777c4067",
+      "sourceName": "lib/FixedPointMathLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "FixedPointMathLib": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "FixedPointMathLib.sol/FixedPointMathLib.json"
+        }
+      }
+    },
     "lib/OpenZeppelinFullMath.sol": {
       "lastModificationDate": 1682198765218,
       "contentHash": "f710d5d7f7d168a6a3b5698bcb093dcf",
@@ -864,8 +904,8 @@
       }
     },
     "test/Muldiv.t.sol": {
-      "lastModificationDate": 1682566972641,
-      "contentHash": "994a6e3a65d1717acb19942946379d6d",
+      "lastModificationDate": 1682572855285,
+      "contentHash": "71a35386795a805f51693b8f8b780c85",
       "sourceName": "test/Muldiv.t.sol",
       "solcConfig": {
         "settings": {
@@ -896,6 +936,7 @@
         }
       },
       "imports": [
+        "lib/FixedPointMathLib.sol",
         "lib/OpenZeppelinFullMath.sol",
         "lib/PRBMathCommon.sol",
         "lib/SolmateFixedPoint.sol",
