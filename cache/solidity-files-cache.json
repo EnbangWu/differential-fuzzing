@@ -51,6 +51,46 @@
         }
       }
     },
+    "lib/PRBMathCommon.sol": {
+      "lastModificationDate": 1682484275453,
+      "contentHash": "4d68d9b56a7a0aa754e9c6a454688027",
+      "sourceName": "lib/PRBMathCommon.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "PRBMathCommon": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "PRBMathCommon.sol/PRBMathCommon.json"
+        }
+      }
+    },
     "lib/SolmateFixedPoint.sol": {
       "lastModificationDate": 1682182466703,
       "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
@@ -824,8 +864,8 @@
       }
     },
     "test/Muldiv.t.sol": {
-      "lastModificationDate": 1682302406304,
-      "contentHash": "2c4c2406d9acf3c32230c2b023da5c0d",
+      "lastModificationDate": 1682566972641,
+      "contentHash": "994a6e3a65d1717acb19942946379d6d",
       "sourceName": "test/Muldiv.t.sol",
       "solcConfig": {
         "settings": {
@@ -857,6 +897,7 @@
       },
       "imports": [
         "lib/OpenZeppelinFullMath.sol",
+        "lib/PRBMathCommon.sol",
         "lib/SolmateFixedPoint.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",

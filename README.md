@@ -33,6 +33,7 @@ And run all the tests by running:
 forge test
 ```
 
+You will also need to install [Ganache](https://github.com/trufflesuite/ganache#readme) to run the tests that require a forked mainnet or implementations with incompatible solidity versions.
 
 ## Running Foundry Fuzzing
 
