@@ -1,0 +1,21 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/Muldiv.t.sol",
+    "id": 32244,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "2106:0:22",
+    "nodes": [],
+    "license": "MIT"
+  },
+  "id": 22
+}

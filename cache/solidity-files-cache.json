@@ -3,7 +3,7 @@
   "paths": {
     "artifacts": "out",
     "build_infos": "out/build-info",
-    "sources": "gas",
+    "sources": "src",
     "tests": "test",
     "scripts": "script",
     "libraries": [
@@ -11,166 +11,6 @@
     ]
   },
   "files": {
-    "lib/OpenZeppelinFullMath.sol": {
-      "lastModificationDate": 1682198765218,
-      "contentHash": "f710d5d7f7d168a6a3b5698bcb093dcf",
-      "sourceName": "lib/OpenZeppelinFullMath.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10000
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "Math": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "OpenZeppelinFullMath.sol/Math.json"
-        }
-      }
-    },
-    "lib/PRBMathCommon.sol": {
-      "lastModificationDate": 1682484275453,
-      "contentHash": "4d68d9b56a7a0aa754e9c6a454688027",
-      "sourceName": "lib/PRBMathCommon.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10000
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "PRBMathCommon": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "PRBMathCommon.sol/PRBMathCommon.json"
-        }
-      }
-    },
-    "lib/SoladyFixedPointMathLib.sol": {
-      "lastModificationDate": 1682572491582,
-      "contentHash": "231022a1bd7f2058bfdafc59777c4067",
-      "sourceName": "lib/SoladyFixedPointMathLib.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10000
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.4",
-      "artifacts": {
-        "FixedPointMathLib": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "SoladyFixedPointMathLib.sol/FixedPointMathLib.json"
-        }
-      }
-    },
-    "lib/SolmateFixedPoint.sol": {
-      "lastModificationDate": 1682182466703,
-      "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
-      "sourceName": "lib/SolmateFixedPoint.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10000
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "FixedPointMathLib": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "SolmateFixedPoint.sol/FixedPointMathLib.json"
-        }
-      }
-    },
     "lib/forge-std/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1678573210737,
       "contentHash": "abdafe4b187f548ef0145173f5b93247",
@@ -903,10 +743,170 @@
         }
       }
     },
-    "test/Muldiv.t.sol": {
-      "lastModificationDate": 1682610332341,
-      "contentHash": "011b1e8988d27ec2c7247913281a6300",
-      "sourceName": "test/Muldiv.t.sol",
+    "lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1682686701064,
+      "contentHash": "b9c58920ce74d6dc819161786112e7ee",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Math": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Math.sol/Math.json"
+        }
+      }
+    },
+    "lib/prb-math/src/Common.sol": {
+      "lastModificationDate": 1682686814226,
+      "contentHash": "a7abc8479f10b4f70e0669219dabcbdf",
+      "sourceName": "lib/prb-math/src/Common.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.19",
+      "artifacts": {
+        "Common": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Common.sol/Common.json"
+        }
+      }
+    },
+    "lib/solady/src/utils/FixedPointMathLib.sol": {
+      "lastModificationDate": 1682686434016,
+      "contentHash": "231022a1bd7f2058bfdafc59777c4067",
+      "sourceName": "lib/solady/src/utils/FixedPointMathLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "FixedPointMathLib": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "utils/FixedPointMathLib.sol/FixedPointMathLib.json"
+        }
+      }
+    },
+    "lib/solmate/src/utils/FixedPointMathLib.sol": {
+      "lastModificationDate": 1682686753472,
+      "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
+      "sourceName": "lib/solmate/src/utils/FixedPointMathLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "FixedPointMathLib": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "src/utils/FixedPointMathLib.sol/FixedPointMathLib.json"
+        }
+      }
+    },
+    "src/MathTest.sol": {
+      "lastModificationDate": 1682687145331,
+      "contentHash": "4729de792fd453f066da392ee19139a9",
+      "sourceName": "src/MathTest.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -936,10 +936,51 @@
         }
       },
       "imports": [
-        "lib/OpenZeppelinFullMath.sol",
-        "lib/PRBMathCommon.sol",
-        "lib/SoladyFixedPointMathLib.sol",
-        "lib/SolmateFixedPoint.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/prb-math/src/Common.sol",
+        "lib/solady/src/utils/FixedPointMathLib.sol",
+        "lib/solmate/src/utils/FixedPointMathLib.sol"
+      ],
+      "versionRequirement": ">=0.8.4, <0.9.0",
+      "artifacts": {
+        "MathTest": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "MathTest.sol/MathTest.json"
+        }
+      }
+    },
+    "test/SqrtTest.t.sol": {
+      "lastModificationDate": 1682703504384,
+      "contentHash": "1ad9700662ad20942e39d7254f035977",
+      "sourceName": "test/SqrtTest.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -956,12 +997,17 @@
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol"
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/prb-math/src/Common.sol",
+        "lib/solady/src/utils/FixedPointMathLib.sol",
+        "lib/solmate/src/utils/FixedPointMathLib.sol",
+        "src/MathTest.sol"
       ],
-      "versionRequirement": ">=0.8.0, <0.9.0",
+      "versionRequirement": ">=0.8.4, <0.9.0",
       "artifacts": {
-        "MulDivTest": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Muldiv.t.sol/MulDivTest.json"
+        "SqrtTest": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "SqrtTest.t.sol/SqrtTest.json"
         }
       }
     }

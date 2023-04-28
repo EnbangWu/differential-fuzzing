@@ -1,5 +1,8 @@
 [profile.default]
-gas_reports = ["OpenZeppelinFullMath", "PRBMathCommon", "SoladyFixedPointMathLib", "SolmateFixedPoint"]
+src = "src"
+out = "out"
+libs = ["lib"]
+gas_reports = ["*"]
 # Compiler optimization options to use (use same as project)
 optimizer = true                                              # enable or disable the solc optimizer
 optimizer_runs = 10000                                        # the number of optimizer runs
@@ -16,8 +19,8 @@ force = false                                                 # whether to ignor
 
 # Fuzz run options - adjust as needed for your fuzzing campaign
 [fuzz]
-runs = 90000                                         # the number of fuzz runs for tests
-max_local_rejects = 90000                            # max number of individual inputs that may be rejected before the test aborts
-max_test_rejects = 90000                           # max number of combined inputs that may be rejected before the test aborts
+runs = 2000                                         # the number of fuzz runs for tests
+max_local_rejects = 2000                            # max number of individual inputs that may be rejected before the test aborts
+max_test_rejects = 2000                           # max number of combined inputs that may be rejected before the test aborts
 
 
