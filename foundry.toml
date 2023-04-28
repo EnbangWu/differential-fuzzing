@@ -1,5 +1,5 @@
 [profile.default]
-gas_reports = ["OpenZeppelinFullMath", "PRBMathCommon", "SoladyFixedPointMathLib", "SolmateFixedPoint", "Muldiv.t"]
+gas_reports = ["OpenZeppelinFullMath", "PRBMathCommon", "SoladyFixedPointMathLib", "SolmateFixedPoint"]
 # Compiler optimization options to use (use same as project)
 optimizer = true                                              # enable or disable the solc optimizer
 optimizer_runs = 10000                                        # the number of optimizer runs

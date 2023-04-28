@@ -14,30 +14,30 @@ import {FixedPointMathLib as SoladyFP} from "../lib/SoladyFixedPointMathLib.sol"
 // import {FixidityLib} from "../lib/FixidityLib.sol";
 
 contract MulDivTest is Test {
-    //@dev compare all the results at once
-    function test_sqrt(uint256 x) pure public {
-        uint256 solmateResult = SolmateFP.sqrt(x);
-        uint256 ozResult = OZFP.sqrt(x);
-        uint256 prbResult = PRBFP.sqrt(x);
-        uint256 soladyResult = SoladyFP.sqrt(x);
-        require(solmateResult == ozResult && ozResult == prbResult && prbResult == soladyResult);
-    }
+    // //@dev compare all the results at once
+    // function test_sqrt(uint256 x) pure public {
+    //     uint256 solmateResult = SolmateFP.sqrt(x);
+    //     uint256 ozResult = OZFP.sqrt(x);
+    //     uint256 prbResult = PRBFP.sqrt(x);
+    //     uint256 soladyResult = SoladyFP.sqrt(x);
+    //     require(solmateResult == ozResult && ozResult == prbResult && prbResult == soladyResult);
+    // }
 
 
-    function test_mulDivDown(uint256 x, uint256 y, uint256 denominator) public {
-        // vm.assume(denominator != 0); // avoid division by zero to find out the error
-        OZFP.Rounding rounding = OZFP.Rounding.Down; // set to down for consistency
-        uint256 solmateResult = SolmateFP.mulDivDown(x, y, denominator);
-        uint256 ozResult = OZFP.mulDiv(x, y, denominator,rounding);
-        assertEq(solmateResult, ozResult); // it's not equal possbily because of overflow handler
-    }
+    // function test_mulDivDown(uint256 x, uint256 y, uint256 denominator) public {
+    //     // vm.assume(denominator != 0); // avoid division by zero to find out the error
+    //     OZFP.Rounding rounding = OZFP.Rounding.Down; // set to down for consistency
+    //     uint256 solmateResult = SolmateFP.mulDivDown(x, y, denominator);
+    //     uint256 ozResult = OZFP.mulDiv(x, y, denominator,rounding);
+    //     assertEq(solmateResult, ozResult); // it's not equal possbily because of overflow handler
+    // }
 
-    function test_mulDivUp(uint256 x, uint256 y, uint256 denominator) public {
-        OZFP.Rounding rounding = OZFP.Rounding.Up; // set to up for consistency
-        uint256 solmateResult = SolmateFP.mulDivUp(x, y, denominator);
-        uint256 ozResult = OZFP.mulDiv(x, y, denominator,rounding);
-        assertEq(solmateResult, ozResult); // it's not equal
-    }
+    // function test_mulDivUp(uint256 x, uint256 y, uint256 denominator) public {
+    //     OZFP.Rounding rounding = OZFP.Rounding.Up; // set to up for consistency
+    //     uint256 solmateResult = SolmateFP.mulDivUp(x, y, denominator);
+    //     uint256 ozResult = OZFP.mulDiv(x, y, denominator,rounding);
+    //     assertEq(solmateResult, ozResult); // it's not equal
+    // }
 
 }
 

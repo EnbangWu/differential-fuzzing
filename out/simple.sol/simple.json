@@ -1,0 +1,355 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "OZ_sqrt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061027d806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063fd72ba6414610030575b600080fd5b61004361003e3660046101ff565b610055565b60405190815260200160405180910390f35b600061006082610066565b92915050565b60008160000361007857506000919050565b6000600161008584610155565b901c6001901b9050600181848161009e5761009e610218565b048201901c905060018184816100b6576100b6610218565b048201901c905060018184816100ce576100ce610218565b048201901c905060018184816100e6576100e6610218565b048201901c905060018184816100fe576100fe610218565b048201901c9050600181848161011657610116610218565b048201901c9050600181848161012e5761012e610218565b048201901c905061014e8182858161014857610148610218565b046101e9565b9392505050565b600080608083901c1561016a57608092831c92015b604083901c1561017c57604092831c92015b602083901c1561018e57602092831c92015b601083901c156101a057601092831c92015b600883901c156101b257600892831c92015b600483901c156101c457600492831c92015b600283901c156101d657600292831c92015b600183901c156100605760010192915050565b60008183106101f8578161014e565b5090919050565b60006020828403121561021157600080fd5b5035919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fdfea264697066735822122040a43595803b144cee580092faaceea6f41a26618b9db0fa9117bbf403d8faec64736f6c63430008130033",
+    "sourceMap": "129:115:0:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063fd72ba6414610030575b600080fd5b61004361003e3660046101ff565b610055565b60405190815260200160405180910390f35b600061006082610066565b92915050565b60008160000361007857506000919050565b6000600161008584610155565b901c6001901b9050600181848161009e5761009e610218565b048201901c905060018184816100b6576100b6610218565b048201901c905060018184816100ce576100ce610218565b048201901c905060018184816100e6576100e6610218565b048201901c905060018184816100fe576100fe610218565b048201901c9050600181848161011657610116610218565b048201901c9050600181848161012e5761012e610218565b048201901c905061014e8182858161014857610148610218565b046101e9565b9392505050565b600080608083901c1561016a57608092831c92015b604083901c1561017c57604092831c92015b602083901c1561018e57602092831c92015b601083901c156101a057601092831c92015b600883901c156101b257600892831c92015b600483901c156101c457600492831c92015b600283901c156101d657600292831c92015b600183901c156100605760010192915050565b60008183106101f8578161014e565b5090919050565b60006020828403121561021157600080fd5b5035919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fdfea264697066735822122040a43595803b144cee580092faaceea6f41a26618b9db0fa9117bbf403d8faec64736f6c63430008130033",
+    "sourceMap": "129:115:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;150:92;;;;;;:::i;:::-;;:::i;:::-;;;345:25:23;;;333:2;318:18;150:92:0;;;;;;;;198:7;223:12;233:1;223:9;:12::i;:::-;216:19;150:92;-1:-1:-1;;150:92:0:o;6530:1642:1:-;6578:7;6601:1;6606;6601:6;6597:45;;-1:-1:-1;6630:1:1;;6530:1642;-1:-1:-1;6530:1642:1:o;6597:45::-;7321:14;7355:1;7344:7;7349:1;7344:4;:7::i;:::-;:12;;7338:1;:19;;7321:36;;7816:1;7805:6;7801:1;:10;;;;;:::i;:::-;;7792:6;:19;7791:26;;7782:35;;7865:1;7854:6;7850:1;:10;;;;;:::i;:::-;;7841:6;:19;7840:26;;7831:35;;7914:1;7903:6;7899:1;:10;;;;;:::i;:::-;;7890:6;:19;7889:26;;7880:35;;7963:1;7952:6;7948:1;:10;;;;;:::i;:::-;;7939:6;:19;7938:26;;7929:35;;8012:1;8001:6;7997:1;:10;;;;;:::i;:::-;;7988:6;:19;7987:26;;7978:35;;8061:1;8050:6;8046:1;:10;;;;;:::i;:::-;;8037:6;:19;8036:26;;8027:35;;8110:1;8099:6;8095:1;:10;;;;;:::i;:::-;;8086:6;:19;8085:26;;8076:35;;8132:23;8136:6;8148;8144:1;:10;;;;;:::i;:::-;;8132:3;:23::i;:::-;8125:30;6530:1642;-1:-1:-1;;;6530:1642:1:o;8633:983::-;8685:7;;8769:3;8760:12;;;:16;8756:99;;8806:3;8796:13;;;;8827;8756:99;8881:2;8872:11;;;:15;8868:96;;8917:2;8907:12;;;;8937;8868:96;8990:2;8981:11;;;:15;8977:96;;9026:2;9016:12;;;;9046;8977:96;9099:2;9090:11;;;:15;9086:96;;9135:2;9125:12;;;;9155;9086:96;9208:1;9199:10;;;:14;9195:93;;9243:1;9233:11;;;;9262;9195:93;9314:1;9305:10;;;:14;9301:93;;9349:1;9339:11;;;;9368;9301:93;9420:1;9411:10;;;:14;9407:93;;9455:1;9445:11;;;;9474;9407:93;9526:1;9517:10;;;:14;9513:64;;9561:1;9551:11;9603:6;8633:983;-1:-1:-1;;8633:983:1:o;588:104::-;646:7;676:1;672;:5;:13;;684:1;672:13;;;-1:-1:-1;680:1:1;;665:20;-1:-1:-1;588:104:1:o;14:180:23:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:23;;14:180;-1:-1:-1;14:180:23:o;381:184::-;433:77;430:1;423:88;530:4;527:1;520:15;554:4;551:1;544:15",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "OZ_sqrt(uint256)": "fd72ba64"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"OZ_sqrt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"gas/simple.sol\":\"simple\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"gas/simple.sol\":{\"keccak256\":\"0xdfa681d2bb47b3f47f47c4e3c9c3af832e9e2467e632e6adb119be733fe2e8b5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6531a9a7deaa6e71c9fdbe1609dcb1e89313a5e2ea4bdba56e215f6db98a2afd\",\"dweb:/ipfs/QmYA9aw4NFtSUb74WFtkQWQ3rQkUZdPK66u1D9xcsQCb1F\"]},\"lib/OpenZeppelinFullMath.sol\":{\"keccak256\":\"0xbaf3bd8c64ac943fafde717797ee797c96360586b9448ea25e9872490a6e6858\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bab65b9b5ea0c68e96e1a73460db616042f639d144a6a75595434cfa2a483ed4\",\"dweb:/ipfs/QmUgwEcWXaEu4VSpymiVq8tZYKgA44HPMWZowpg2L8Kiij\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "x",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "OZ_sqrt",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "gas/simple.sol": "simple"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "gas/simple.sol": {
+        "keccak256": "0xdfa681d2bb47b3f47f47c4e3c9c3af832e9e2467e632e6adb119be733fe2e8b5",
+        "urls": [
+          "bzz-raw://6531a9a7deaa6e71c9fdbe1609dcb1e89313a5e2ea4bdba56e215f6db98a2afd",
+          "dweb:/ipfs/QmYA9aw4NFtSUb74WFtkQWQ3rQkUZdPK66u1D9xcsQCb1F"
+        ],
+        "license": "MIT"
+      },
+      "lib/OpenZeppelinFullMath.sol": {
+        "keccak256": "0xbaf3bd8c64ac943fafde717797ee797c96360586b9448ea25e9872490a6e6858",
+        "urls": [
+          "bzz-raw://bab65b9b5ea0c68e96e1a73460db616042f639d144a6a75595434cfa2a483ed4",
+          "dweb:/ipfs/QmUgwEcWXaEu4VSpymiVq8tZYKgA44HPMWZowpg2L8Kiij"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "gas/simple.sol",
+    "id": 18,
+    "exportedSymbols": {
+      "OZFP": [
+        883
+      ],
+      "simple": [
+        17
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:212:0",
+    "nodes": [
+      {
+        "id": 1,
+        "nodeType": "PragmaDirective",
+        "src": "32:31:0",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "src": "65:62:0",
+        "nodes": [],
+        "absolutePath": "lib/OpenZeppelinFullMath.sol",
+        "file": "../lib/OpenZeppelinFullMath.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 18,
+        "sourceUnit": 884,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2,
+              "name": "Math",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 883,
+              "src": "74:4:0",
+              "typeDescriptions": {}
+            },
+            "local": "OZFP",
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 17,
+        "nodeType": "ContractDefinition",
+        "src": "129:115:0",
+        "nodes": [
+          {
+            "id": 16,
+            "nodeType": "FunctionDefinition",
+            "src": "150:92:0",
+            "nodes": [],
+            "body": {
+              "id": 15,
+              "nodeType": "Block",
+              "src": "206:36:0",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 12,
+                        "name": "x",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "233:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 10,
+                        "name": "OZFP",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 883,
+                        "src": "223:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Math_$883_$",
+                          "typeString": "type(library Math)"
+                        }
+                      },
+                      "id": 11,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "228:4:0",
+                      "memberName": "sqrt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 387,
+                      "src": "223:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 13,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "223:12:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9,
+                  "id": 14,
+                  "nodeType": "Return",
+                  "src": "216:19:0"
+                }
+              ]
+            },
+            "functionSelector": "fd72ba64",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "OZ_sqrt",
+            "nameLocation": "159:7:0",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5,
+                  "mutability": "mutable",
+                  "name": "x",
+                  "nameLocation": "175:1:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "167:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "166:11:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "198:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:9:0"
+            },
+            "scope": 17,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "simple",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          17
+        ],
+        "name": "simple",
+        "nameLocation": "138:6:0",
+        "scope": 18,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 0
+}
