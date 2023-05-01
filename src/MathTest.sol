@@ -24,4 +24,12 @@ contract MathTest {
     function soladySqrt(uint256 x) public returns (uint256 d) {
         d = SoladyFP.sqrt(x);
     }
+
+    function OzLog2(uint256 x) public returns (uint256 result) {
+        result = OZFP.log2(x);
+    }
+
+    function soladyLog2(uint256 x) public returns (uint256 result) {
+        result = SoladyFP.log2(x);
+    }
 }

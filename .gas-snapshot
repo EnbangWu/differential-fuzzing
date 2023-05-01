@@ -1,0 +1,5 @@
+SqrtTest:test_0Z_sqrt() (gas: 6356)
+SqrtTest:test_Paul_sqrt() (gas: 6094)
+SqrtTest:test_Solady_sqrt() (gas: 5823)
+SqrtTest:test_Solmate_sqrt() (gas: 5748)
+SqrtTest:test_diffSqrt(uint256) (runs: 2000, μ: 10110, ~: 10115)

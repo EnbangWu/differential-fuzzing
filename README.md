@@ -3,14 +3,6 @@
 This is a repo that aims to check whether different Fixed-point libraries output the same result by using Foundry differential fuzzing. 
 
 This repo is generated from [Patrick's solidity fuzzing boilerplate](https://github.com/patrickd-/solidity-fuzzing-boilerplate)
-```
-├── cache
-├── lib                # Forge libraries and Math libraries.
-│   └── forge-std
-├── out
-└── test               # Fuzzing Test cases.
-    └── helpers.sol    # Reusable helper functions for tests.
-```
 
 ## Setup
 You will need to install [Foundry](https://book.getfoundry.sh/getting-started/installation) to run the fuzzing tests.
@@ -39,13 +31,13 @@ You will also need to install [Ganache](https://github.com/trufflesuite/ganache#
 
 ```bash
 # Simple fuzzing with Foundry:
-forge test --match test_sqrt
+forge test --match test_diffSqrt
 
 # Differential fuzzing against another implementation with incompatible Solidity version via ganache fork:
-forge test --fork-url http://127.0.0.1:8545/ --match-path test/Muldiv.t.sol
+forge test --fork-url http://127.0.0.1:8545/ --match-path test/DiffFixedPointTest.t.sol
 
 # Differential fuzzing against an executable via FFI shell command execution:
-forge test --match-path test/Muldiv.t.sol
+forge test --match-path test/DiffFixedPointTest.t.sol
 ```
 
 Note you can change the number of runs in  [foundry.toml](foundry.toml). More runs mean there are more random inputs feed into the functions. If you instead want to run quick tests, eg. for CI, adjust the configuration according to your needs.
@@ -61,7 +53,7 @@ forge run --fork-url http://127.0.0.1:8545/ --sig "test_BytesLib_BytesUtil_diff_
 ``` -->
 ## TODO
 - [ ] Figure out the MulDivDown and MulDivUp differences
-- [ ] gas reports
+- [x] gas reports
 - [ ] fuzzing on implementations with incompatible solidity versions
 - [ ] FFI shell command execution
 ##### ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SNIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

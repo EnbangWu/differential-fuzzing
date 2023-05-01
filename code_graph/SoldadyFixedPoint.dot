@@ -1,0 +1,88 @@
+digraph G {
+  graph [ ratio = "auto", page = "100", compound =true, bgcolor = "#2e3e56" ];
+  node [ style = "filled", fillcolor = "#edad56", color = "#edad56", penwidth =3 ];
+  edge [ color = "#fcfcfc", penwidth =2, fontname = "helvetica Neue Ultra Light" ];
+subgraph "clusterFixedPointMathLib" {
+  graph [ label = "FixedPointMathLib  (lib)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "FixedPointMathLib.mulWad" [ label = "mulWad", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.mulWadUp" [ label = "mulWadUp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.divWad" [ label = "divWad", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.divWadUp" [ label = "divWadUp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.powWad" [ label = "powWad", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.expWad" [ label = "expWad" ];
+  "FixedPointMathLib.lnWad" [ label = "lnWad" ];
+  "FixedPointMathLib.fullMulDiv" [ label = "fullMulDiv" ];
+  "FixedPointMathLib.fullMulDivUp" [ label = "fullMulDivUp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.mulDiv" [ label = "mulDiv", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.mulDivUp" [ label = "mulDivUp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.divUp" [ label = "divUp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.zeroFloorSub" [ label = "zeroFloorSub", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.sqrt" [ label = "sqrt", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.cbrt" [ label = "cbrt", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.factorial" [ label = "factorial", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.log2" [ label = "log2" ];
+  "FixedPointMathLib.log2Up" [ label = "log2Up", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.avg" [ label = "avg", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.abs" [ label = "abs", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.dist" [ label = "dist", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.min" [ label = "min" ];
+  "FixedPointMathLib.max" [ label = "max" ];
+  "FixedPointMathLib.clamp" [ label = "clamp", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.gcd" [ label = "gcd", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawAdd" [ label = "rawAdd", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawSub" [ label = "rawSub", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawMul" [ label = "rawMul", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawDiv" [ label = "rawDiv", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawSDiv" [ label = "rawSDiv", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawMod" [ label = "rawMod", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawSMod" [ label = "rawSMod", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawAddMod" [ label = "rawAddMod", color = "#f2c383", fillcolor = "#f2c383" ];
+  "FixedPointMathLib.rawMulMod" [ label = "rawMulMod", color = "#f2c383", fillcolor = "#f2c383" ];
+}
+
+  "FixedPointMathLib.powWad";
+  "FixedPointMathLib.expWad";
+  "FixedPointMathLib.lnWad";
+  "FixedPointMathLib.fullMulDivUp";
+  "FixedPointMathLib.fullMulDiv";
+  "FixedPointMathLib.log2Up";
+  "FixedPointMathLib.log2";
+  "FixedPointMathLib.clamp";
+  "FixedPointMathLib.min";
+  "FixedPointMathLib.max";
+  "FixedPointMathLib.powWad" -> "FixedPointMathLib.expWad" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.powWad" -> "FixedPointMathLib.lnWad" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.fullMulDivUp" -> "FixedPointMathLib.fullMulDiv" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.log2Up" -> "FixedPointMathLib.log2" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.clamp" -> "FixedPointMathLib.min" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.clamp" -> "FixedPointMathLib.max" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.clamp" -> "FixedPointMathLib.min" [ color = "#1bc6a6" ];
+  "FixedPointMathLib.clamp" -> "FixedPointMathLib.max" [ color = "#1bc6a6" ];
+
+
+rankdir=LR
+node [shape=plaintext]
+subgraph cluster_01 { 
+label = "Legend";
+key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td align="right" port="i1">Internal Call</td></tr>
+  <tr><td align="right" port="i2">External Call</td></tr>
+  <tr><td align="right" port="i3">Defined Contract</td></tr>
+  <tr><td align="right" port="i4">Undefined Contract</td></tr>
+  </table>>]
+key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td port="i1">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i2">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i3" bgcolor="#445773">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i4">
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="7" color="#e8726d">
+      <tr>
+       <td></td>
+      </tr>
+     </table>
+  </td></tr>
+  </table>>]
+key:i1:e -> key2:i1:w [color="#1bc6a6"]
+key:i2:e -> key2:i2:w [color="white"]
+}
+}

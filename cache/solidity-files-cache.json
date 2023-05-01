@@ -4,13 +4,76 @@
     "artifacts": "out",
     "build_infos": "out/build-info",
     "sources": "src",
-    "tests": "test",
+    "tests": "Test",
     "scripts": "script",
     "libraries": [
       "lib"
     ]
   },
   "files": {
+    "Test/diffFixedPointTest.sol": {
+      "lastModificationDate": 1682916509665,
+      "contentHash": "706dc51915da624fe522e2683669dea0",
+      "sourceName": "Test/diffFixedPointTest.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/prb-math/src/Common.sol",
+        "lib/solady/src/utils/FixedPointMathLib.sol",
+        "lib/solmate/src/utils/FixedPointMathLib.sol",
+        "src/MathTest.sol"
+      ],
+      "versionRequirement": ">=0.8.4, <0.9.0",
+      "artifacts": {
+        "SqrtTest": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "diffFixedPointTest.sol/SqrtTest.json"
+        }
+      }
+    },
     "lib/forge-std/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1678573210737,
       "contentHash": "abdafe4b187f548ef0145173f5b93247",
@@ -904,8 +967,8 @@
       }
     },
     "src/MathTest.sol": {
-      "lastModificationDate": 1682687145331,
-      "contentHash": "4729de792fd453f066da392ee19139a9",
+      "lastModificationDate": 1682916573985,
+      "contentHash": "fd8aff49b39b3cee47db46b89e0ccb29",
       "sourceName": "src/MathTest.sol",
       "solcConfig": {
         "settings": {
@@ -945,69 +1008,6 @@
       "artifacts": {
         "MathTest": {
           "0.8.19+commit.7dd6d404.Darwin.appleclang": "MathTest.sol/MathTest.json"
-        }
-      }
-    },
-    "test/SqrtTest.t.sol": {
-      "lastModificationDate": 1682703504384,
-      "contentHash": "1ad9700662ad20942e39d7254f035977",
-      "sourceName": "test/SqrtTest.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10000
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
-        "lib/prb-math/src/Common.sol",
-        "lib/solady/src/utils/FixedPointMathLib.sol",
-        "lib/solmate/src/utils/FixedPointMathLib.sol",
-        "src/MathTest.sol"
-      ],
-      "versionRequirement": ">=0.8.4, <0.9.0",
-      "artifacts": {
-        "SqrtTest": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "SqrtTest.t.sol/SqrtTest.json"
         }
       }
     }
