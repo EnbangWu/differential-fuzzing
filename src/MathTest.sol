@@ -32,4 +32,13 @@ contract MathTest {
     function soladyLog2(uint256 x) public returns (uint256 result) {
         result = SoladyFP.log2(x);
     }
+
+    function OzLog2Up(uint256 x) public returns (uint256 result) {
+        result = OZFP.log2(x, OZFP.Rounding.Up);
+    }
+
+    function soladyLog2Up(uint256 x) public returns (uint256 result) {
+        result = SoladyFP.log2Up(x);
+    }
+
 }

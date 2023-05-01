@@ -36,6 +36,14 @@ contract SqrtTest is Test {
         instance.soladyLog2(ROOT_NUM);
         }
 
+    function test_Oz_log2Up() public {
+        instance.OzLog2Up(ROOT_NUM);
+        }
+
+    function test_Solady_log2Up() public {
+        instance.soladyLog2Up(ROOT_NUM);
+        }
+
      function test_diffSqrt(uint256 num) public {
         uint256 solmateResult = instance.solmateSqrt(num);
         uint256 ozResult = instance.OzSqrt(num);
@@ -48,9 +56,20 @@ contract SqrtTest is Test {
         );
     }
 
+    //@notice when num = 0, ozResult = 0, soladyResult = 0x5be3aa5c
     function test_diffLog2(uint256 num) public {
+        vm.assume(num > 0); //@audit they handle num = 0 differently.
         uint256 ozResult = instance.OzLog2(num);
         uint256 soladyResult = instance.soladyLog2(num);
+        require(
+            ozResult == soladyResult
+        );
+    }
+
+    function test_diffLog2Up(uint256 num) public {
+        vm.assume(num > 0); // same here
+        uint256 ozResult = instance.OzLog2Up(num);
+        uint256 soladyResult = instance.soladyLog2Up(num);
         require(
             ozResult == soladyResult
         );
