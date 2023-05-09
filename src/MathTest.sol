@@ -89,4 +89,32 @@ contract MathTest {
     {
         result = PRBFP.mulDiv(x, y, z);
     }
+
+    function solmateMulWadUp(uint256 x, uint256 y)
+        public 
+        returns (uint256 result)
+    {
+        result = SolmateFP.mulWadUp(x, y);
+    }
+
+    function soladyMulWadUp(uint256 x, uint256 y)
+        public 
+        returns (uint256 result)
+    {
+        result = SoladyFP.mulWadUp(x, y);
+    }
+
+    function solmateDivWadUp(uint256 x, uint256 y)
+        public 
+        returns (uint256 result)
+    {
+        result = SolmateFP.divWadUp(x, y);
+    }
+
+    function soladyDivWadUp(uint256 x, uint256 y)
+        public 
+        returns (uint256 result)
+    {
+        result = SoladyFP.divWadUp(x, y);
+    }
 }

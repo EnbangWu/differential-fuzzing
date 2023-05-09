@@ -51,11 +51,7 @@ forge run --sig "slice(bytes,uint256,uint256)" --target-contract ExposedBytesLib
 # Manually execute a testcase to reproduce an issue:
 forge run --fork-url http://127.0.0.1:8545/ --sig "test_BytesLib_BytesUtil_diff_slice(bytes,uint256,uint256)" --target-contract Test -vvvv src/test/example/BytesLib-BytesUtil-diff.sol 0x010203 1 1
 ``` -->
-## TODO
-- [ ] Figure out the MulDivDown and MulDivUp differences
-- [x] gas reports
-- [ ] fuzzing on implementations with incompatible solidity versions
-- [ ] FFI shell command execution
+
 ##### ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SNIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Solidity Fuzzing Boilerplate

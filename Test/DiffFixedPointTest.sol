@@ -72,6 +72,19 @@ contract SqrtTest is Test {
         instance.prbMulDivDown(ROOT_NUM, ROOT_NUM, ROOT_NUM);
         }
     
+    function test_solmate_mulWadUp() public {
+        instance.solmateMulWadUp(ROOT_NUM, ROOT_NUM);
+        }
+
+    function test_solmate_divWadUp() public {
+        instance.solmateDivWadUp(ROOT_NUM, ROOT_NUM);
+        }
+
+    function test_solady_dipWadUp() public {
+        instance.soladyDivWadUp(ROOT_NUM, ROOT_NUM);
+        }
+
+    
      function test_diffSqrt(uint256 num) public {
         uint256 solmateResult = instance.solmateSqrt(num);
         uint256 ozResult = instance.OzSqrt(num);
@@ -127,4 +140,21 @@ contract SqrtTest is Test {
         );
     }
 
+    function test_diffMulWadUp(uint256 x, uint256 y) public {
+        vm.assume(y == 0 || x <= type(uint256).max / y); // assume that y is 0 or x is less than or equal to type(uint256).max / y
+        uint256 solmateResult = instance.solmateMulWadUp(x, y);
+        uint256 soladyResult = instance.soladyMulWadUp(x, y);
+        require(
+            solmateResult == soladyResult
+        );
+    }
+
+    function test_diffDivWadUp(uint256 x, uint256 y) public {
+        vm.assume(y> 0 && x <= type(uint256).max / SolmateFP.WAD);
+        uint256 solmateResult = instance.solmateDivWadUp(x, y);
+        uint256 soladyResult = instance.soladyDivWadUp(x, y);
+        require(
+            solmateResult == soladyResult
+        );
+    }
 }
