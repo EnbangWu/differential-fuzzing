@@ -44,6 +44,34 @@ contract SqrtTest is Test {
         instance.soladyLog2Up(ROOT_NUM);
         }
 
+    function test_Oz_mulDivUp() public {
+        instance.OzMulDivUp(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+    
+    function test_Solady_mulDivUp() public {
+        instance.soladyMulDivUp(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+    
+    function test_solmate_mulDivUp() public {
+        instance.solmateMulDivUp(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+
+    function test_Oz_mulDivDown() public {
+        instance.OzMulDivDown(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+
+    function test_Solady_mulDivDown() public {
+        instance.soladyMulDivDown(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+
+    function test_solmate_mulDivDown() public {
+        instance.solmateMulDivDown(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+    
+    function test_prb_mulDivDown() public {
+        instance.prbMulDivDown(ROOT_NUM, ROOT_NUM, ROOT_NUM);
+        }
+    
      function test_diffSqrt(uint256 num) public {
         uint256 solmateResult = instance.solmateSqrt(num);
         uint256 ozResult = instance.OzSqrt(num);
@@ -74,4 +102,29 @@ contract SqrtTest is Test {
             ozResult == soladyResult
         );
     }
+    // @audit when it's offset, Solady will return 0xad251c27, which is the 
+    // function selector of MulDivFailed() so we add VM assumption
+    function test_diffMulDivDown(uint256 x, uint256 y, uint256 z) public {
+        vm.assume(z > 0); // assume that the divisor is not zero
+        vm.assume(y == 0 || x <= type(uint256).max / y); // assume that y is 0 or x is less than or equal to type(uint256).max / y
+        uint256 ozResult = instance.OzMulDivDown(x, y, z);
+        uint256 soladyResult = instance.soladyMulDivDown(x, y, z);
+        uint256 solmateResult = instance.solmateMulDivDown(x, y, z);
+        uint256 prbResult = instance.prbMulDivDown(x, y, z);
+        require(
+            ozResult == soladyResult && soladyResult == solmateResult && solmateResult == prbResult
+        );
+    }
+
+    function test_diffMulDivUp(uint256 x, uint256 y, uint256 z) public {
+        vm.assume(z > 0); // assume that the divisor is not zero
+        vm.assume(y == 0 || x <= type(uint256).max / y); // assume that y is 0 or x is less than or equal to type(uint256).max / y
+        uint256 ozResult = instance.OzMulDivUp(x, y, z);
+        uint256 soladyResult = instance.soladyMulDivUp(x, y, z);
+        uint256 solmateResult = instance.solmateMulDivUp(x, y, z);
+        require(
+            ozResult == soladyResult && soladyResult == solmateResult
+        );
+    }
+
 }

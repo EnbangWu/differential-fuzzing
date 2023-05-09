@@ -41,4 +41,52 @@ contract MathTest {
         result = SoladyFP.log2Up(x);
     }
 
+    function OzMulDivDown(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = OZFP.mulDiv(x, y, z, OZFP.Rounding.Down);
+    }
+
+    function OzMulDivUp (uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = OZFP.mulDiv(x, y, z, OZFP.Rounding.Up);
+    }
+
+    function solmateMulDivDown(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = SolmateFP.mulDivDown(x, y, z);
+    }
+
+    function solmateMulDivUp(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = SolmateFP.mulDivUp(x, y, z);
+    }
+
+    function soladyMulDivDown(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = SoladyFP.mulDiv(x, y, z);
+    }
+
+    function soladyMulDivUp(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = SoladyFP.mulDivUp(x, y, z);
+    }
+
+    function prbMulDivDown(uint256 x, uint256 y, uint256 z)
+        public
+        returns (uint256 result)
+    {
+        result = PRBFP.mulDiv(x, y, z);
+    }
 }
