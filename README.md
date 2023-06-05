@@ -25,8 +25,6 @@ And run all the tests by running:
 forge test
 ```
 
-You will also need to install [Ganache](https://github.com/trufflesuite/ganache#readme) to run the tests that require a forked mainnet or implementations with incompatible solidity versions.
-
 ## Running Foundry Fuzzing
 
 ```bash
@@ -42,15 +40,6 @@ forge test --match-path test/DiffFixedPointTest.t.sol
 
 Note you can change the number of runs in  [foundry.toml](foundry.toml). More runs mean there are more random inputs feed into the functions. If you instead want to run quick tests, eg. for CI, adjust the configuration according to your needs.
 
-## Reproducing a finding / Manual testing
-
-<!-- ```bash
-# Call function of exposed library and show execution trace:
-forge run --sig "slice(bytes,uint256,uint256)" --target-contract ExposedBytesLib -vvvv src/expose/example/BytesLib.sol 0x010203 1 1
-
-# Manually execute a testcase to reproduce an issue:
-forge run --fork-url http://127.0.0.1:8545/ --sig "test_BytesLib_BytesUtil_diff_slice(bytes,uint256,uint256)" --target-contract Test -vvvv src/test/example/BytesLib-BytesUtil-diff.sol 0x010203 1 1
-``` -->
 
 ##### ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SNIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -100,7 +100,7 @@ contract SqrtTest is Test {
 
     //@notice when num = 0, ozResult = 0, soladyResult = 0x5be3aa5c
     function test_diffLog2(uint256 num) public {
-        vm.assume(num > 0); //@audit they handle num = 0 differently.
+        if (num > 0){ //@audit they handle num = 0 differently.
         console.log("Testing with num: %s", num);
         uint256 ozResult = instance.OzLog2(num);
         uint256 soladyResult = instance.soladyLog2(num);
@@ -108,15 +108,16 @@ contract SqrtTest is Test {
             ozResult == soladyResult
         );
     }
-
+}
     function test_diffLog2Up(uint256 num) public {
-        vm.assume(num > 0); // same here
+        if (num > 0){  // same here
         uint256 ozResult = instance.OzLog2Up(num);
         uint256 soladyResult = instance.soladyLog2Up(num);
         require(
             ozResult == soladyResult
         );
     }
+}
     // @audit when it's offset, Solady will return 0xad251c27, which is the 
     // function selector of MulDivFailed() so we add VM assumption
     function test_diffMulDivDown(uint256 x, uint256 y, uint256 z) public {
