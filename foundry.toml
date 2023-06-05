@@ -19,8 +19,8 @@ force = false                                                 # whether to ignor
 
 # Fuzz run options - adjust as needed for your fuzzing campaign
 [fuzz]
-runs = 999999                                         # the number of fuzz runs for tests
-max_local_rejects = 999999                            # max number of individual inputs that may be rejected before the test aborts
-max_test_rejects = 999999                           # max number of combined inputs that may be rejected before the test aborts
+runs = 9999999                                         # the number of fuzz runs for tests
+max_local_rejects = 9999999                            # max number of individual inputs that may be rejected before the test aborts
+max_test_rejects = 9999999                           # max number of combined inputs that may be rejected before the test aborts
 
 

@@ -52,7 +52,7 @@ OzLog2, OzLog2Up, OzMulDivDown, OzMulDivUp, and OzSqrt consume more gas than the
 Among the rest, solmate is the most gas efficient one. All functions in the solmate library have relatively low gas consumption, which makes it the preferred
 
 ## proper fuzz campaigns
-To ensure the correctness of the fuzzing, we ran the proper fuzzing campaigns with 999999999 runs. Typically it's not necessary to run that many times during development, but as security researchers we want to cover as many cases as possible.
+To ensure the correctness of the fuzzing, we ran the proper fuzzing campaigns with 9999999 runs. Typically it's not necessary to run that many times during development, but as security researchers we want to cover as many cases as possible.
 
 you can change the number of runs in  [foundry.toml](foundry.toml). More runs mean there are more random inputs feed into the functions. If you instead want to run quick tests, eg. for CI, adjust the configuration according to your needs.
 
