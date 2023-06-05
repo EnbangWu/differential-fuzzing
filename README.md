@@ -1,6 +1,6 @@
 # Differential Fuzzing of solidity Fixed-point libraries
 
-This is a repo that aims to check whether different Fixed-point libraries output the same result by using Foundry differential fuzzing. 
+This is a repo that aims to check whether different Fixed-point libraries output the same result by using Foundry differential fuzzing. We analyzed openZepplin, solady, solmate and prb-math. In general they are compatible with each other. However, there are some slight differences in the implementations in terms of corner cases handling. And they consume different amount of gas as well. you can find the detailed report in the [report](report.md)
 
 This repo is generated from [Patrick's solidity fuzzing boilerplate](https://github.com/patrickd-/solidity-fuzzing-boilerplate)
 
@@ -39,18 +39,6 @@ forge test --match-path test/DiffFixedPointTest.t.sol
 ```
 
 Note you can change the number of runs in  [foundry.toml](foundry.toml). More runs mean there are more random inputs feed into the functions. If you instead want to run quick tests, eg. for CI, adjust the configuration according to your needs.
-
-
-##### ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SNIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Solidity Fuzzing Boilerplate
-
-This is a template repository intended to ease fuzzing components of Solidity projects, especially libraries.
-
-- Write tests once and run them [Foundry](https://book.getfoundry.sh/forge/fuzz-testing.html)'s fuzzing.
-- Fuzz components that use incompatible Solidity versions by deploying those into a Ganache instance via Etheno.
-- Use HEVM's FFI cheatcode to generate complex fuzzing inputs or to compare outputs with non-EVM executables while doing differential fuzzing.
-- Publish your fuzzing experiments without worrying about licensing by extending the shellscript to download specific files.
 
 
 
