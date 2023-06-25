@@ -17,7 +17,7 @@ contract MathTest {
         b = OZFP.sqrt(x);
     }
 
-    function paulSqrt(uint256 x) public returns (uint256 c) {
+    function prbSqrt(uint256 x) public returns (uint256 c) {
         c = PRBFP.sqrt(x);
     }
 

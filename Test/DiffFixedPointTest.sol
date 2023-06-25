@@ -21,8 +21,8 @@ contract SqrtTest is Test {
             instance.OzSqrt(ROOT_NUM);
     }
 
-    function test_Paul_sqrt() public {
-            instance.paulSqrt(ROOT_NUM);
+    function test_Prb_sqrt() public {
+            instance.prbSqrt(ROOT_NUM);
     }
 
     function test_Solady_sqrt() public {
@@ -89,12 +89,12 @@ contract SqrtTest is Test {
      function test_diffSqrt(uint256 num) public {
         uint256 solmateResult = instance.solmateSqrt(num);
         uint256 ozResult = instance.OzSqrt(num);
-        uint256 paulResult = instance.paulSqrt(num);
+        uint256 prbResult = instance.prbSqrt(num);
         uint256 soladyResult = instance.soladySqrt(num);
         require(
             solmateResult == ozResult &&
-                ozResult == paulResult &&
-                paulResult == soladyResult
+                ozResult == prbResult &&
+                prbResult == soladyResult
         );
     }
 
